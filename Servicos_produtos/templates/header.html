@@ -1,0 +1,58 @@
+
+
+{% load static  %}
+ <!-- ##### Header Area Start ##### -->
+    <header class="header-area" style="background-color: #222222;">
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a style="width: 60px !important" class="nav-brand" href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt="Logo"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav" style="color: white !important;">
+                                <ul>
+                                    <li><a style="color: white !important;" href="{% url 'index' %}">News</a></li>
+                                </ul>
+
+                                 <ul>
+                                    <li><a style="color: white !important;" href="{% url 'index' %}">Specs</a></li>
+                                </ul>
+
+                                 <ul>
+                                    <li><a style="color: white !important;" href="#produtos">Comprar</a></li>
+                                </ul>
+
+                                <ul>
+                                    <li><a style="color: white !important;" href="#produtos">Empresas Cadastradas</a></li>
+                                </ul>
+
+
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->

@@ -1,0 +1,93 @@
+
+
+
+{% extends 'base.html' %} <!--bloco de codigo html outra aprte do html que sera carregado-->
+{% load static %}<!-- serve para carregar os arquivos estaticos que estao escrito static-->
+{% block content %} <!--indicando onde irá comecar o bloco de conteudo-->
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="img/core-img/hamburger.png" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="O que está procurando...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include 'header.html' %}
+        
+        <!-- Receipe Content Area -->
+        <div class="receipe-content-area">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="receipe-headline my-5">
+                            <span>Data da publicação{{servico.data_publicada}}</span>
+                            <h2>{{servico.nome_da_grafica}}</h2>
+                            <div class="receipe-duration">
+                                <h6>CNPJ: {{servico.cnpj}}</h6>
+                                <h6>Telefone: {{servico.telefone}}</h6>
+                                <h6>Endereco: {{servico.endereco}}</h6>
+                                <a href="https://wa.me/5511973998515?text=Olá,%20Quero%20obter%20mais%20informacoes"> Para mais informacoes chama no whats<img style="width:30px !important; height:30px !important; margin-left:10px " src="https://image.flaticon.com/icons/png/512/124/124034.png" ></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex">
+                            <h2 class="col-12 col-lg-12">Descricão completa:</h2>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <div class="single-preparation-step d-flex">
+                                <p class="">{{servico.nome_servicos}}</p>
+                            </div>
+                            <div class="col-12 col-lg-12" style="padding:0px">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2846955631217!2d-46.92425078502229!3d-23.55821648468444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf06c2770d1827%3A0x87ccb543e81f6e00!2sR.%20Laurindo%20Martins%2C%20580%20-%20Jardim%20Bela%20Vista%2C%20Itapevi%20-%20SP%2C%2006656-190!5e0!3m2!1spt-BR!2sbr!4v1595168692831!5m2!1spt-BR!2sbr" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+                <!-- Ingredientes -->
+
+                    <!-- Receipe Post Search -->
+        <div id="produtos" style="background-color: #222222; margin-top: 50px; margin-bottom: 50px">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <img src="{% static 'img/bg-img/camiseta.png' %}" alt="">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <img src="{% static 'img/bg-img/canecas.png' %}" alt="">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <img src="{% static 'img/bg-img/caneta.png' %}" alt="">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+{% include 'footer.html' %}
+{% endblock %}
